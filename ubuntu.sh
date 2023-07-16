@@ -23,7 +23,7 @@ echo "export PROMPT_COMMAND='echo -n \[\$(date +%F-%T)\]\ '" >> /home/jdm/.bashr
 # Configure KVM
 systemctl stop libvirtd && cd /etc/apparmor.d/disable/ && rm -rf usr.sbin.libvirtd && cp /etc/libvirt/qemu.conf /etc/libvirt/qemu.conf.ORIG
 sed -i -e 's|#user = "root"|user = "jdm"|g' /etc/libvirt/qemu.conf  && sed -i -e 's|#group = "root"|group= "libvirt-qemu"|g' /etc/libvirt/qemu.conf && systemctl restart libvirtd
-	chown -R libvirt-qemu:libvirt-qemu /var/lib/libvirt/images/
+chown -R libvirt-qemu:libvirt-qemu /var/lib/libvirt/images/
 
 # Docker install
 apt -y install ansible apt-transport-https ca-certificates curl gnupg-agent software-properties-common vim powertop
