@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Your Email Information: Recipient (To:), Subject and Body
-RECIPIENT="cas2.0@protonmail.com"
+RECIPIENT="use@email.com"
 SUBJECT="Email from your Server: SSH Login Alert"
 
 BODY="
