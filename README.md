@@ -57,3 +57,19 @@ An SSH login was successful. Details below:
 	Server:      Linux casdev01.cas.local 5.15.0-76-generic #83-Ubuntu SMP Thu Jun 15 19:16:32 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
 
 ```
+# Date time in terminal and history
+1. mkdir /root/scripts && cd /root/scripts
+2. vim datetime.sh
+```
+#!/bin/bash
+# Christopher Sargent 05312023
+set -x #echo on
+
+# Add date time stamp to root and jboss prompts/history's
+echo "export PROMPT_COMMAND='echo -n \[\$(date +%F-%T)\]\ '" >> /etc/bashrc && echo "export HISTTIMEFORMAT='%F-%T '" >> /etc/bashrc && source /etc/bashrc
+
+# Add ll alias 
+echo "alias ll='ls -alF'" >> /etc/bashrc && source /etc/bashrc
+```
+3. chmod 700 datetime.sh
+4. ./datetime.sh
