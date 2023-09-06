@@ -115,4 +115,12 @@ curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compo
 ```
 3. chmod 700 ubuntu.sh
 4. ./ubuntu.sh
+# pwnedpasswords.sh
+* ./pwnedpasswords.sh PasswordThatYouWantToCheck 
+1. ./pwnedpasswords.sh doolittle
+```
+Candidate password: doolittle
+3D0D3E36E1151D7A6669B58DD3170342C28:3068
+Candidate password is compromised
+```
 
