@@ -124,7 +124,14 @@ Candidate password: doolittle
 Candidate password is compromised
 ```
 # bakups.sh
-1.
-2.
-3.
-
+* Backup script to back up Windows via WSL to a linux mounted backup server
+1. git clone https://github.com/ChristopherSargent/swc_scripts.git
+2. mkdir -p /root/backups/logs && mkdir -p /root/backups/scripts
+3. cp swc_scripts /root/backups/scripts
+4. update copyto and copyfrom and adjust excludes as needed
+5. crontab -e
+```
+20 09 * * * /root/backups/scripts/backups.sh &>/dev/null &
+```
+6. systemctl restart cron
+7. verify backups
