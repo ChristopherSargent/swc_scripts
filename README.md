@@ -123,4 +123,8 @@ Candidate password: doolittle
 3D0D3E36E1151D7A6669B58DD3170342C28:3068
 Candidate password is compromised
 ```
+# bakups.sh
+1.
+2.
+3.
 
